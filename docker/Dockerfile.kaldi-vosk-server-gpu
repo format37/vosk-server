@@ -4,6 +4,8 @@ ARG KALDI_MKL
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TZ=Etc/UTC
 
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A4B469963BF863CC
+
 RUN  apt-get update && \
     apt-get install -y --no-install-recommends \
         wget \
